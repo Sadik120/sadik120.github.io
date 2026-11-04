@@ -247,6 +247,26 @@
             color: var(--text-light);
         }
 
+        /* Skills List */
+        .skills-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .skills-list li {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .skills-list strong {
+            color: var(--text-main);
+        }
+
         /* Contact Section */
         .contact-info {
             display: flex;
@@ -273,7 +293,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Hides links on mobile for simplicity */
+                display: none;
             }
             .hero {
                 flex-direction: column;
@@ -286,6 +306,15 @@
             .btn-group {
                 justify-content: center;
             }
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .skills-list {
+                grid-template-columns: 1fr 1fr;
+            }
         }
     </style>
 </head>
@@ -297,7 +326,8 @@
             <a href="#" class="nav-brand">Md Sadekul Islam</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
+                <li><a href="#research">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -313,17 +343,13 @@
             <div class="hero-content">
                 <h1>Md Sadekul Islam</h1>
                 <div class="subtitle">Mechanical & Industrial Engineer | AI & Optimization Researcher</div>
-                <p>Bridging traditional mechanical design (CAD, FEA) with advanced Industry 4.0 solutions (Deep Reinforcement Learning, Graph Neural Networks) to solve complex manufacturing and systems engineering problems.</p>
+                <p>Bridging traditional mechanical design (CAD, FEA, DFM) with advanced Industry 4.0 solutions (Deep Reinforcement Learning, Graph Neural Networks) to solve complex manufacturing and systems engineering problems.</p>
                 <div class="btn-group">
                     <!-- REPLACE '#' WITH YOUR ACTUAL CV PDF LINK (e.g., href="cv.pdf") -->
                     <a href="#" class="btn btn-primary" target="_blank">Download CV (PDF)</a>
-                    
                     <a href="https://scholar.google.com/citations?user=fwAI9YIAAAAJ&hl=en" class="btn btn-outline" target="_blank">Google Scholar</a>
-                    
                     <a href="https://www.researchgate.net/profile/Md-Islam-1652" class="btn btn-outline" target="_blank">ResearchGate</a>
-                    
                     <a href="https://orcid.org/0000-0003-4205-4544" class="btn btn-outline" target="_blank">ORCID</a>
-
                     <a href="https://linkedin.com/in/md-sadekul" class="btn btn-outline" target="_blank">LinkedIn</a>
                 </div>
             </div>
@@ -332,7 +358,7 @@
         <!-- About Section -->
         <section id="about">
             <h2>About Me</h2>
-            <p style="margin-bottom: 1rem;">I am an engineering researcher with over 5 years of R&D experience at Walton Hi-Tech Industries PLC, where I led the design and launch of complex consumer products, including a 250+ part flagship refrigerator. </p>
+            <p style="margin-bottom: 1rem;">I am an engineering researcher and product designer with over 7 years of R&D experience at Walton Hi-Tech Industries PLC. I have led the design and launch of complex consumer products, including a 250+ part flagship refrigerator, achieving 95% conformance to specifications and a 10% reduction in production costs through DFM optimization.</p>
             <p style="margin-bottom: 1rem;">I hold an M.Engg. in Advanced Engineering Management from BUET (GPA 3.45/4.00) and a B.Sc. in Industrial & Production Engineering from KUET (CGPA 3.59/4.00, Ranked 11th).</p>
             <p>My research focuses on applying Deep Reinforcement Learning (DRL), Graph Neural Networks (GNNs), and Discrete-Event Simulation to optimize facility layouts, production systems, and autonomous decision-making under strict spatial constraints.</p>
         </section>
@@ -343,25 +369,42 @@
             <div class="grid">
                 <!-- Project 1 -->
                 <div class="card">
-                    <h3>AI-Driven Facility Layout</h3>
+                    <h3>AI-Driven Facility Layout Optimization</h3>
                     <p><strong>Master's Thesis:</strong> Developed a hybrid AI pipeline (Genetic Algorithm + Rainbow DQN + GNN) to optimize industrial facility layouts under strict spatial constraints, reducing material handling costs by 25%.</p>
                 </div>
                 <!-- Project 2 -->
                 <div class="card">
+                    <h3>Flagship Refrigerator (SBS-646L)</h3>
+                    <p><strong>Industry R&D:</strong> Led the mechanical design of Walton's largest side-by-side refrigerator (250+ parts). Conducted FEA, mold trials, draft analysis, and pilot production reviews for water dispensers and ice-tray mechanisms.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="card">
                     <h3>Virtual Factory Design</h3>
                     <p>Developed 3D virtual plant models (SketchUp, V-Ray) integrating machinery collision constraints, hazard buffer zones, and human-machine interaction clearances for smart manufacturing.</p>
                 </div>
-                <!-- Project 3 -->
+                <!-- Project 4 -->
                 <div class="card">
                     <h3>Prosthetic Leg Assembly</h3>
                     <p>Designed a functional artificial limb in Fusion 360, focusing on mechanical joint articulation, material selection, and user comfort, bridging biomechanics and human-centered design.</p>
                 </div>
-                <!-- Project 4 -->
-                <div class="card">
+                 <!-- Project 5 -->
+                 <div class="card">
                     <h3>Consumer Product Design</h3>
-                    <p>Engineered a three-component snap-fit assembly in SolidWorks; utilized Autodesk Moldflow to analyze material flow and optimize tooling design for injection molding.</p>
+                    <p>Engineered a three-component snap-fit portable speaker assembly in SolidWorks; utilized Autodesk Moldflow to analyze material flow and optimize tooling design for injection molding.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <ul class="skills-list">
+                <li><strong>Design & CAE:</strong> SolidWorks (Motion/Evaluation), Fusion 360, AutoCAD, PTC Creo, KeyShot, SketchUp (V-Ray), ANSYS (Structural/Thermal).</li>
+                <li><strong>Advanced Manufacturing:</strong> Autodesk Moldflow, Injection Molding & Mold Trials, Draft Analysis (DFM), 3D Printing (SLA), Sheet Metal Processing, CNC.</li>
+                <li><strong>Simulation & Optimization:</strong> Siemens Tecnomatix (Plant Simulation), Arena, SimPy, LINGO; Genetic Algorithms, Deep Reinforcement Learning (Rainbow DQN), GNNs.</li>
+                <li><strong>Programming & AI:</strong> Python, C, C++, PyTorch, PyTorch Geometric, Gymnasium, TensorFlow, NumPy, Pandas.</li>
+                <li><strong>Data & Project Management:</strong> Power BI, Minitab, MS Project, Primavera P6, Oracle, Microsoft Excel.</li>
+            </ul>
         </section>
 
         <!-- Publications Section -->
