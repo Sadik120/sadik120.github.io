@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Research — Md Sadekul Islam</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Research by Md Sadekul Islam on facility layout optimization, deep reinforcement learning and line balancing.">
+<meta name="author" content="Md Sadekul Islam">
+<meta property="og:site_name" content="Md Sadekul Islam">
+<meta property="og:title" content="Research — Md Sadekul Islam">
+<meta property="og:description" content="Research by Md Sadekul Islam on facility layout optimization, deep reinforcement learning and line balancing.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2306384b'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ESI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: Mabey-style one-column site. Sticky bar, full-bleed photo bands, alternating image/text rows, centred footer. */
+:root{
+  --bg:#ffffff; --fg:#1d2b31; --muted:#52666e; --line:#dbe5e8;
+  --ink:#06384b;      /* deep teal from the portfolio slides */
+  --accent:#0f7c8c;   /* lighter teal for links and labels */
+  --tint:#eaf2f3;     /* the portfolio's pale blue-grey panel */
+  --on-ink:#ffffff;
+  --display:"Libre Franklin","Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Source Sans 3","Segoe UI",Helvetica,Arial,sans-serif;
+  --gutter:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1a1f; --fg:#e3ecee; --muted:#9fb3b9; --line:#22363d; --ink:#0b4a60; --accent:#6cc6d2; --tint:#14262d; --on-ink:#ffffff; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a1f; --fg:#e3ecee; --muted:#9fb3b9; --line:#22363d; --ink:#0b4a60; --accent:#6cc6d2; --tint:#14262d; --on-ink:#ffffff; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1.0625rem/1.7 var(--body)}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3,h4{font-family:var(--display);color:var(--fg);line-height:1.2;text-wrap:balance;margin:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--on-ink);padding:.6rem 1rem;z-index:50}
+.skip:focus{left:16px;top:16px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.narrow{max-width:860px}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:1.15rem}
+.brand{font:700 1.3rem/1 var(--display);letter-spacing:.01em;color:var(--fg);text-decoration:none}
+.menu{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+.menu a{font:500 .95rem/1 var(--display);color:var(--muted);text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}
+.menu a:hover{color:var(--fg)}
+.menu a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--accent)}
+.burger{display:none;background:none;border:1px solid var(--line);color:var(--fg);border-radius:6px;padding:.45rem .6rem;font:600 .9rem var(--display);cursor:pointer}
+@media (max-width:860px){
+  .burger{display:inline-block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem var(--gutter-r) 1rem var(--gutter)}
+  .menu.open{display:flex}
+  .menu a{display:block;padding:.85rem 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
+  .menu a[aria-current="page"]{border-bottom-color:var(--line);color:var(--accent)}
+}
+
+/* Photo bands (home hero and banner) */
+.band{position:relative;color:var(--on-ink);background:#06384b center/cover no-repeat;isolation:isolate}
+.band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(4,30,40,.86) 0%,rgba(4,30,40,.6) 55%,rgba(4,30,40,.35) 100%)}
+.band .wrap{padding-block:clamp(5rem,13vw,9.5rem)}
+.band h1,.band h2{color:var(--on-ink);max-width:16ch;font-size:clamp(2.2rem,5.4vw,3.9rem);font-weight:700;letter-spacing:-.01em}
+.band p{max-width:46ch;margin:1.25rem 0 0;font-size:1.15rem;color:#dcebee}
+.band .eyebrow{color:#9fe0e8}
+.eyebrow{font:700 .78rem/1.45 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1rem}
+
+/* Buttons */
+.btn{display:inline-block;margin-top:1.6rem;padding:.85rem 1.6rem;border-radius:3px;background:var(--ink);color:var(--on-ink);font:600 .95rem/1 var(--display);letter-spacing:.03em;text-decoration:none;border:2px solid var(--ink)}
+.btn:hover{background:transparent;color:var(--fg);border-color:var(--fg)}
+.band .btn{background:var(--on-ink);color:#06384b;border-color:var(--on-ink)}
+.band .btn:hover{background:transparent;color:var(--on-ink)}
+
+/* Home feature rows */
+.features{display:grid;gap:clamp(3rem,7vw,5.5rem);padding-block:clamp(3.5rem,8vw,6rem)}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(1.75rem,5vw,4.5rem);align-items:center}
+.feature:nth-child(even) .feature-media{order:2}
+.feature-media{background:var(--tint);aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.feature-media img{width:100%;height:100%;object-fit:cover}
+.feature-media.contain img{object-fit:contain;padding:1.5rem}
+.feature h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:1rem}
+.feature p{margin:0;color:var(--muted);max-width:52ch}
+.feature > div{min-width:0}
+@media (max-width:760px){.feature{grid-template-columns:1fr}.feature:nth-child(even) .feature-media{order:0}}
+
+/* Page heads */
+.page-head{padding-block:clamp(3rem,7vw,5rem) clamp(1.5rem,4vw,2.5rem)}
+.page-head h1{font-size:clamp(2.3rem,5vw,3.4rem)}
+.page-head .lede{font:500 clamp(1.1rem,2vw,1.3rem)/1.5 var(--display);color:var(--muted);max-width:56ch;margin:1rem 0 0}
+
+/* Blog-style lists (Research, Projects) */
+.posts{display:grid;gap:0;padding-bottom:4rem}
+.post{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:clamp(2.25rem,5vw,3.5rem);border-top:1px solid var(--line)}
+.post-media{display:block;background:var(--tint);aspect-ratio:3/2;overflow:hidden}
+.post-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.post-media.contain img{object-fit:contain;padding:1rem}
+.post-media:hover img{transform:scale(1.03)}
+.meta{font:600 .8rem/1.4 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 .7rem}
+.post h2{font-size:clamp(1.35rem,2.6vw,1.75rem);margin-bottom:.9rem}
+.post h2 a{color:var(--fg);text-decoration:none}
+.post h2 a:hover{color:var(--accent)}
+.post p{margin:0 0 .5rem;color:var(--muted)}
+.read-more{display:inline-block;margin-top:.75rem;font:600 .9rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;color:var(--accent);text-decoration:none;border-bottom:2px solid currentColor;padding-bottom:3px}
+@media (max-width:760px){.post{grid-template-columns:1fr}}
+
+/* Article (detail) pages */
+.article{padding-block:clamp(3rem,7vw,5rem) 2rem}
+.article h1{font-size:clamp(2rem,4.6vw,3rem);margin-bottom:1rem}
+.byline{font-size:.95rem;color:var(--muted);margin:0 0 2.5rem}
+.article p,.article li{max-width:68ch}
+.article p{margin:0 0 1.15rem}
+.article h2{font-size:1.35rem;margin:2.5rem 0 1rem}
+.article ul{padding-left:1.2rem;margin:0 0 1.2rem}
+.article li{margin-bottom:.4rem}
+.cite{background:var(--tint);padding:1.25rem 1.4rem;margin:0 0 1.5rem;max-width:68ch;font-size:1rem}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin:2.5rem 0}
+.figs.one{grid-template-columns:1fr}
+.figs figure{margin:0}
+.figs img{width:100%;background:var(--tint)}
+.figs figcaption{font-size:.9rem;color:var(--muted);margin-top:.55rem}
+@media (max-width:640px){.figs{grid-template-columns:1fr}}
+.pager{display:flex;justify-content:space-between;gap:1.5rem;border-top:1px solid var(--line);padding-block:2rem 4rem;margin-top:2rem}
+.pager a{text-decoration:none;color:var(--fg);max-width:46%;min-width:0}
+.pager span{display:block;font:700 .75rem/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.45rem}
+.pager .next{text-align:right;margin-left:auto}
+.pager strong{font-family:var(--display);font-weight:600}
+
+/* Experience */
+.jobs{display:grid;gap:0;padding-bottom:2rem}
+.job{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:clamp(2.25rem,5vw,3.25rem);border-top:1px solid var(--line);align-items:start}
+.job-media{background:var(--tint);aspect-ratio:4/3;overflow:hidden}
+.job-media img{width:100%;height:100%;object-fit:cover}
+.job-media.contain img{object-fit:contain;padding:1rem}
+.job h2{font-size:1.45rem}
+.job .org{font-style:italic;color:var(--muted);margin:.3rem 0 .2rem}
+.job .when{font:600 .8rem/1.4 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 1rem}
+.job ul{margin:0;padding-left:1.15rem}
+.job li{margin-bottom:.45rem}
+@media (max-width:760px){.job{grid-template-columns:1fr}}
+.center{text-align:center;padding-block:1rem 5rem}
+
+/* About */
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(2rem,5vw,4.5rem);padding-block:clamp(3rem,7vw,5rem);align-items:start}
+.portrait{aspect-ratio:4/5;background:var(--ink);overflow:hidden;display:grid;place-items:center;max-width:100%}
+.portrait > *{grid-area:1/1}
+.portrait img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+.portrait .initials{font:700 5rem/1 var(--display);color:var(--on-ink)}
+.about h1{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1.5rem}
+.about p{margin:0 0 1.15rem;max-width:64ch}
+@media (max-width:760px){.about{grid-template-columns:1fr}.portrait{max-width:340px}}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding-bottom:5rem}
+.gallery figure{margin:0;aspect-ratio:1;background:var(--tint);overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover}
+@media (max-width:640px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Contact */
+.contact{padding-block:clamp(3rem,8vw,6rem) clamp(4rem,9vw,7rem)}
+.contact h1{font-size:clamp(2.3rem,5vw,3.4rem);margin-bottom:1.5rem}
+.contact .big{font:500 clamp(1.15rem,2.6vw,1.6rem)/1.5 var(--display);margin:0 0 .4rem;overflow-wrap:anywhere}
+.contact .big a{color:var(--fg)}
+.contact dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:.7rem 2rem;margin:2.5rem 0 0;max-width:640px}
+.contact dt{font:700 .78rem/1.9 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.contact dd{margin:0;overflow-wrap:anywhere}
+@media (max-width:560px){.contact dl{grid-template-columns:1fr;gap:.1rem}.contact dd{margin-bottom:.9rem}}
+
+/* Footer */
+.site-footer{background:var(--tint);text-align:center;padding-block:3.25rem 3.5rem;border-top:1px solid var(--line)}
+.site-footer h3{font-size:1.25rem;margin-bottom:.9rem}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.35rem .25rem;margin:0;padding:0;list-style:none;font-size:.98rem}
+.foot-links li+li::before{content:"|";color:var(--muted);margin-right:.35rem}
+.foot-links a{color:var(--fg);text-decoration:none}
+.foot-links a:hover{color:var(--accent)}
+.site-footer small{display:block;margin-top:1.1rem;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#page">Skip to content</a>
+<header class="site-header"><div class="wrap bar">
+  <a class="brand" href="home.html">Md Sadekul Islam</a>
+  <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav aria-label="Main"><ul class="menu" id="menu"><li><a href="home.html">Home</a></li><li><a href="research.html" aria-current="page">Research</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="Md_Sadekul_Islam_CV.pdf" target="_blank" rel="noopener">CV</a></li></ul></nav>
+</div></header>
+<main id="page">
+<div class="wrap">
+  <header class="page-head"><h1>Research</h1>
+  <p class="lede">My research uses optimization, simulation and learning-based methods to help engineers design production systems, from balancing a single line to laying out a whole facility.</p></header>
+  <div class="posts"><article class="post">
+  <a class="post-media contain" href="research-facility-layout-drl.html" tabindex="-1" aria-hidden="true"><img src="img/layout-pipeline.svg" alt="" loading="lazy"></a>
+  <div>
+    <p class="meta">M.Engg. thesis · BUET · September 2026 · Manuscript in preparation</p>
+    <h2><a href="research-facility-layout-drl.html">Integrating Evolutionary Algorithm and Deep Reinforcement Learning for Efficient Facility Layout Design</a></h2>
+    <p><strong>Abstract:</strong> Facility layout decides how far materials travel inside a factory, and it has to respect machine sizes, safety space and the flow between machines. This thesis builds a two-stage pipeline for the problem. A genetic algorithm first generates feasible layouts, and a Rainbow DQN agent then refines them. The agent works with a 12-component composite reward, action masking, dimension-aware prevention of overlaps across multiple grid cells, and a graph neural network encoder pre-trained on synthetic material-flow graphs. The method is evaluated on a 26-machine industrial layout from a Bangladeshi manufacturer, with sensitivity analyses over reward weights (a 21-run design at two search budgets), grid resolution (9, 11 and 13) and flow density (six flow configurations). The thesis also documents the problems that remain open: training instability, residual overlaps, and unreliable outcomes when flow data are very sparse. These set the next steps: multi-seed evaluation, longer training and constraint-aware repair.</p>
+    <a class="read-more" href="research-facility-layout-drl.html">Read more</a>
+  </div>
+</article>
+<article class="post">
+  <a class="post-media contain" href="research-tecnomatix-rpwm.html" tabindex="-1" aria-hidden="true"><img src="img/line-balancing.svg" alt="" loading="lazy"></a>
+  <div>
+    <p class="meta">Journal article · 2019 · American Journal of Industrial and Business Management</p>
+    <h2><a href="research-tecnomatix-rpwm.html">Production Efficiency Improvement by Using Tecnomatix Simulation Software and RPWM Line Balancing Technique: A Case Study</a></h2>
+    <p><strong>Abstract:</strong> This case study, based on my B.Sc. thesis at KUET, looks at a sewing line in a bag manufacturing plant. Every operation on the line was time-studied, and the operations were then regrouped into workstations with the Ranked Positional Weight Method (RPWM) to balance the work across the line. The balanced line was modelled in Siemens Tecnomatix Plant Simulation to check that it was feasible before any change was made on the floor.</p>
+    <a class="read-more" href="research-tecnomatix-rpwm.html">Read more</a>
+  </div>
+</article></div>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <h3>Md Sadekul Islam</h3>
+  <ul class="foot-links"><li><a href="research.html">Research</a></li><li><a href="experience.html">Experience</a></li><li><a href="projects.html">Projects</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <small>&copy; <span id="yr">2026</span> Md Sadekul Islam · Dhaka, Bangladesh</small>
+</div></footer>
+<script>
+(function(){
+  var b=document.querySelector('.burger'), m=document.getElementById('menu');
+  if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});}
+  var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

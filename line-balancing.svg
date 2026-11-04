@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="960" height="600" fill="#f3f7f8"/>
+  <text x="40" y="58" font-size="24" font-weight="700" fill="#06384b">Sewing line balancing</text>
+  <text x="40" y="88" font-size="16" fill="#3f5a64">B.Sc. thesis, KUET · published 2019</text>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#06384b"/></marker></defs>
+  <g>
+    <rect x="40" y="160" width="250" height="150" rx="10" fill="#ffffff" stroke="#06384b" stroke-width="2"/>
+    <text x="60" y="195" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">STEP 1</text>
+    <text x="60" y="225" font-size="20" font-weight="700" fill="#06384b">Time study</text>
+    <text x="60" y="255" font-size="15" fill="#3f5a64">Every operation on the</text>
+    <text x="60" y="277" font-size="15" fill="#3f5a64">bag-making line timed</text>
+    <rect x="355" y="160" width="250" height="150" rx="10" fill="#06384b"/>
+    <text x="375" y="195" font-size="13" font-weight="700" fill="#8fd3dc" letter-spacing="1.5">STEP 2</text>
+    <text x="375" y="225" font-size="20" font-weight="700" fill="#ffffff">RPWM balancing</text>
+    <text x="375" y="255" font-size="15" fill="#d6e7ea">Operations regrouped by</text>
+    <text x="375" y="277" font-size="15" fill="#d6e7ea">ranked positional weight</text>
+    <rect x="670" y="160" width="250" height="150" rx="10" fill="#ffffff" stroke="#06384b" stroke-width="2"/>
+    <text x="690" y="195" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">STEP 3</text>
+    <text x="690" y="225" font-size="20" font-weight="700" fill="#06384b">Tecnomatix model</text>
+    <text x="690" y="255" font-size="15" fill="#3f5a64">Balanced line simulated</text>
+    <text x="690" y="277" font-size="15" fill="#3f5a64">to check feasibility</text>
+    <line x1="290" y1="235" x2="352" y2="235" stroke="#06384b" stroke-width="2.5" marker-end="url(#a)"/>
+    <line x1="605" y1="235" x2="667" y2="235" stroke="#06384b" stroke-width="2.5" marker-end="url(#a)"/>
+  </g>
+  <text x="40" y="400" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">WORKSTATIONS (ILLUSTRATIVE)</text>
+  <g fill="#0f7c8c">
+    <rect x="40" y="420" width="140" height="44" rx="4"/><rect x="190" y="420" width="140" height="44" rx="4"/><rect x="340" y="420" width="140" height="44" rx="4"/><rect x="490" y="420" width="140" height="44" rx="4"/><rect x="640" y="420" width="140" height="44" rx="4"/><rect x="790" y="420" width="130" height="44" rx="4"/>
+  </g>
+  <line x1="40" y1="500" x2="920" y2="500" stroke="#06384b" stroke-width="2" marker-end="url(#a)"/>
+  <text x="40" y="530" font-size="15" fill="#3f5a64">Material flow along the sewing line</text>
+</svg>
