@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-  <rect width="960" height="600" fill="#06384b"/>
-  <g stroke="#0f7c8c" stroke-width="1" opacity=".6">
-    <path d="M0 100H960M0 200H960M0 300H960M0 400H960M0 500H960M120 0V600M240 0V600M360 0V600M480 0V600M600 0V600M720 0V600M840 0V600"/>
-  </g>
-  <text x="60" y="250" font-size="18" font-weight="700" fill="#8fd3dc" letter-spacing="3">INDUSTRIAL TRAINING · 2018</text>
-  <text x="60" y="320" font-size="48" font-weight="700" fill="#ffffff">Brothers Furniture Ltd.</text>
-  <text x="60" y="370" font-size="22" fill="#d6e7ea">CAD, 3D scanning, CNC and robotic production · Savar</text>
-</svg>
