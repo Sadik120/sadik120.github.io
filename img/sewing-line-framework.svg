@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Five-stage framework for a luggage sewing line: balance, simulate, screen and rank, lean, re-optimise; result 24 operators to 15 and 384 to 503 units per shift</title>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#06384b"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0f7c8c"/></marker></defs>
+  <rect width="900" height="600" fill="#f3f7f8"/>
+  <text x="48" y="64" font-size="22" font-weight="700" fill="#0f7c8c" letter-spacing="2.5">27-OPERATION LUGGAGE SEWING LINE</text>
+  <text x="48" y="106" font-size="34" font-weight="700" fill="#06384b">Balance, simulate, select, lean</text>
+
+  <g font-size="22" font-weight="700" text-anchor="middle">
+    <rect x="48" y="146" width="150" height="104" rx="10" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+    <text x="123" y="190" fill="#06384b">Heuristic</text><text x="123" y="218" fill="#06384b">+ exact IP</text>
+    <rect x="224" y="146" width="150" height="104" rx="10" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+    <text x="299" y="190" fill="#06384b">Stochastic</text><text x="299" y="218" fill="#06384b">simulation</text>
+    <rect x="400" y="146" width="150" height="104" rx="10" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+    <text x="475" y="190" fill="#06384b">Demand</text><text x="475" y="218" fill="#06384b">screen</text>
+    <rect x="576" y="146" width="150" height="104" rx="10" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+    <text x="651" y="190" fill="#06384b">TOPSIS</text><text x="651" y="218" fill="#06384b">+ VIKOR</text>
+    <rect x="752" y="146" width="100" height="104" rx="10" fill="#06384b"/>
+    <text x="802" y="190" fill="#fff">Kaizen</text><text x="802" y="218" fill="#fff">+ 5S</text>
+  </g>
+  <g stroke="#06384b" stroke-width="3" marker-end="url(#a)">
+    <line x1="199" y1="198" x2="220" y2="198"/><line x1="375" y1="198" x2="396" y2="198"/><line x1="551" y1="198" x2="572" y2="198"/><line x1="727" y1="198" x2="748" y2="198"/>
+  </g>
+  <path d="M802 252 V286 H123 V256" fill="none" stroke="#0f7c8c" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#b)"/>
+  <text x="462" y="314" text-anchor="middle" font-size="19" fill="#0f7c8c" font-weight="600">lean time savings fed back into the optimisation</text>
+
+  <text x="48" y="374" font-size="20" font-weight="700" fill="#0f7c8c" letter-spacing="2">CURRENT LINE → SELECTED DESIGN</text>
+  <!-- operators -->
+  <text x="48" y="420" font-size="21" fill="#3f5a64">Operators</text>
+  <rect x="200" y="400" width="450" height="30" fill="#c9d8dc"/><text x="660" y="424" font-size="22" font-weight="700" fill="#3f5a64">24</text>
+  <rect x="200" y="436" width="281" height="30" fill="#0f7c8c"/><text x="491" y="460" font-size="22" font-weight="700" fill="#06384b">15</text>
+  <!-- output -->
+  <text x="48" y="510" font-size="21" fill="#3f5a64">Units / shift</text>
+  <rect x="200" y="490" width="365" height="30" fill="#c9d8dc"/><text x="575" y="514" font-size="22" font-weight="700" fill="#3f5a64">384</text>
+  <rect x="200" y="526" width="478" height="30" fill="#0f7c8c"/><text x="688" y="550" font-size="22" font-weight="700" fill="#06384b">503</text>
+  <rect x="560" y="356" width="20" height="20" fill="#c9d8dc"/><text x="588" y="374" font-size="19" fill="#3f5a64">now</text>
+  <rect x="650" y="356" width="20" height="20" fill="#0f7c8c"/><text x="678" y="374" font-size="19" fill="#3f5a64">selected</text>
+  <text x="852" y="460" text-anchor="end" font-size="21" font-weight="700" fill="#0f7c8c">−38%</text>
+  <text x="852" y="550" text-anchor="end" font-size="21" font-weight="700" fill="#0f7c8c">+31%</text>
+</svg>

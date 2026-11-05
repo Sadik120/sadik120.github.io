@@ -1,31 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
-  <rect width="960" height="600" fill="#f3f7f8"/>
-  <text x="40" y="58" font-size="24" font-weight="700" fill="#06384b">Sewing line balancing</text>
-  <text x="40" y="88" font-size="16" fill="#3f5a64">B.Sc. thesis, KUET · published 2019</text>
-  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#06384b"/></marker></defs>
-  <g>
-    <rect x="40" y="160" width="250" height="150" rx="10" fill="#ffffff" stroke="#06384b" stroke-width="2"/>
-    <text x="60" y="195" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">STEP 1</text>
-    <text x="60" y="225" font-size="20" font-weight="700" fill="#06384b">Time study</text>
-    <text x="60" y="255" font-size="15" fill="#3f5a64">Every operation on the</text>
-    <text x="60" y="277" font-size="15" fill="#3f5a64">bag-making line timed</text>
-    <rect x="355" y="160" width="250" height="150" rx="10" fill="#06384b"/>
-    <text x="375" y="195" font-size="13" font-weight="700" fill="#8fd3dc" letter-spacing="1.5">STEP 2</text>
-    <text x="375" y="225" font-size="20" font-weight="700" fill="#ffffff">RPWM balancing</text>
-    <text x="375" y="255" font-size="15" fill="#d6e7ea">Operations regrouped by</text>
-    <text x="375" y="277" font-size="15" fill="#d6e7ea">ranked positional weight</text>
-    <rect x="670" y="160" width="250" height="150" rx="10" fill="#ffffff" stroke="#06384b" stroke-width="2"/>
-    <text x="690" y="195" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">STEP 3</text>
-    <text x="690" y="225" font-size="20" font-weight="700" fill="#06384b">Tecnomatix model</text>
-    <text x="690" y="255" font-size="15" fill="#3f5a64">Balanced line simulated</text>
-    <text x="690" y="277" font-size="15" fill="#3f5a64">to check feasibility</text>
-    <line x1="290" y1="235" x2="352" y2="235" stroke="#06384b" stroke-width="2.5" marker-end="url(#a)"/>
-    <line x1="605" y1="235" x2="667" y2="235" stroke="#06384b" stroke-width="2.5" marker-end="url(#a)"/>
-  </g>
-  <text x="40" y="400" font-size="13" font-weight="700" fill="#0f7c8c" letter-spacing="1.5">WORKSTATIONS (ILLUSTRATIVE)</text>
-  <g fill="#0f7c8c">
-    <rect x="40" y="420" width="140" height="44" rx="4"/><rect x="190" y="420" width="140" height="44" rx="4"/><rect x="340" y="420" width="140" height="44" rx="4"/><rect x="490" y="420" width="140" height="44" rx="4"/><rect x="640" y="420" width="140" height="44" rx="4"/><rect x="790" y="420" width="130" height="44" rx="4"/>
-  </g>
-  <line x1="40" y1="500" x2="920" y2="500" stroke="#06384b" stroke-width="2" marker-end="url(#a)"/>
-  <text x="40" y="530" font-size="15" fill="#3f5a64">Material flow along the sewing line</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Sewing line balancing: time study, RPWM balancing and Tecnomatix simulation of a 27-operation luggage sewing line</title>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#06384b"/></marker></defs>
+  <rect width="900" height="600" fill="#f3f7f8"/>
+  <text x="48" y="74" font-size="22" font-weight="700" fill="#0f7c8c" letter-spacing="2.5">B.SC. THESIS · KUET · 2019</text>
+  <text x="48" y="118" font-size="36" font-weight="700" fill="#06384b">Sewing line balancing</text>
+
+  <rect x="48" y="160" width="248" height="120" rx="12" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+  <text x="70" y="200" font-size="20" font-weight="700" fill="#0f7c8c" letter-spacing="2">STEP 1</text>
+  <text x="70" y="246" font-size="30" font-weight="700" fill="#06384b">Time study</text>
+  <rect x="326" y="160" width="248" height="120" rx="12" fill="#06384b"/>
+  <text x="348" y="200" font-size="20" font-weight="700" fill="#8fd3dc" letter-spacing="2">STEP 2</text>
+  <text x="348" y="246" font-size="30" font-weight="700" fill="#fff">RPWM</text>
+  <rect x="604" y="160" width="248" height="120" rx="12" fill="#fff" stroke="#06384b" stroke-width="2.5"/>
+  <text x="626" y="200" font-size="20" font-weight="700" fill="#0f7c8c" letter-spacing="2">STEP 3</text>
+  <text x="626" y="246" font-size="30" font-weight="700" fill="#06384b">Tecnomatix</text>
+  <line x1="298" y1="220" x2="322" y2="220" stroke="#06384b" stroke-width="3" marker-end="url(#a)"/>
+  <line x1="576" y1="220" x2="600" y2="220" stroke="#06384b" stroke-width="3" marker-end="url(#a)"/>
+
+  <text x="48" y="336" font-size="20" font-weight="700" fill="#0f7c8c" letter-spacing="2">27 OPERATIONS, STANDARD MINUTES</text>
+  <g fill="#0f7c8c"><rect x="48.0" y="502.5" width="24" height="37.5" rx="2"/><rect x="78.3" y="435.0" width="24" height="105.0" rx="2"/><rect x="108.6" y="427.5" width="24" height="112.5" rx="2"/><rect x="138.9" y="490.5" width="24" height="49.5" rx="2"/><rect x="169.2" y="510.0" width="24" height="30.0" rx="2"/><rect x="199.5" y="511.5" width="24" height="28.5" rx="2"/><rect x="229.8" y="469.5" width="24" height="70.5" rx="2"/><rect x="260.1" y="427.5" width="24" height="112.5" rx="2"/><rect x="290.4" y="420.0" width="24" height="120.0" rx="2"/><rect x="320.7" y="492.0" width="24" height="48.0" rx="2"/><rect x="351.0" y="511.5" width="24" height="28.5" rx="2"/><rect x="381.3" y="477.0" width="24" height="63.0" rx="2"/><rect x="411.6" y="447.0" width="24" height="93.0" rx="2"/><rect x="441.9" y="447.0" width="24" height="93.0" rx="2"/><rect x="472.2" y="477.0" width="24" height="63.0" rx="2"/><rect x="502.5" y="520.5" width="24" height="19.5" rx="2"/><rect x="532.8" y="394.5" width="24" height="145.5" rx="2"/><rect x="563.1" y="495.0" width="24" height="45.0" rx="2"/><rect x="593.4" y="477.0" width="24" height="63.0" rx="2"/><rect x="623.7" y="360.0" width="24" height="180.0" rx="2"/><rect x="654.0" y="490.5" width="24" height="49.5" rx="2"/><rect x="684.3" y="352.5" width="24" height="187.5" rx="2"/><rect x="714.6" y="439.5" width="24" height="100.5" rx="2"/><rect x="744.9" y="477.0" width="24" height="63.0" rx="2"/><rect x="775.2" y="427.5" width="24" height="112.5" rx="2"/><rect x="805.5" y="490.5" width="24" height="49.5" rx="2"/><rect x="835.8" y="390.0" width="24" height="150.0" rx="2"/></g>
+  <line x1="44" y1="540" x2="856" y2="540" stroke="#06384b" stroke-width="2"/>
+  <text x="48" y="578" font-size="20" fill="#3f5a64">Bag sewing line, in order of assembly · tallest bar 1.25 min</text>
 </svg>
