@@ -176,6 +176,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .foot-links a:hover{color:var(--accent)}
 .site-footer small{display:block;margin-top:1.1rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Justified body text (tablet and up); left-aligned on phones */
+@media (min-width:640px){
+  .about p,.article p,.article li,.post p,.feature p,.job li{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3}
+  .article .byline,.article .cite,.article .eyebrow,.article .meta,.post .meta{text-align:left;hyphens:manual}
+}
+
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://sadik120.github.io/project-benchmarking-and-drawings.html">

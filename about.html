@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>About — Md Sadekul Islam</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="About Md Sadekul Islam, industrial engineer and researcher.">
+<meta name="description" content="About Md Sadekul Islam, mechanical and industrial engineer at Walton (2019–present) researching AI and optimization for engineering design, manufacturing and logistics.">
 <meta name="author" content="Md Sadekul Islam">
 <meta property="og:site_name" content="Md Sadekul Islam">
 <meta property="og:title" content="About — Md Sadekul Islam">
-<meta property="og:description" content="About Md Sadekul Islam, industrial engineer and researcher.">
+<meta property="og:description" content="About Md Sadekul Islam, mechanical and industrial engineer at Walton (2019–present) researching AI and optimization for engineering design, manufacturing and logistics.">
 <meta property="og:image" content="https://sadik120.github.io/img/profile.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2306384b'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ESI%3C/text%3E%3C/svg%3E">
@@ -176,6 +176,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .foot-links a:hover{color:var(--accent)}
 .site-footer small{display:block;margin-top:1.1rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Justified body text (tablet and up); left-aligned on phones */
+@media (min-width:640px){
+  .about p,.article p,.article li,.post p,.feature p,.job li{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3}
+  .article .byline,.article .cite,.article .eyebrow,.article .meta,.post .meta{text-align:left;hyphens:manual}
+}
+
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://sadik120.github.io/about.html">
@@ -185,7 +191,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <meta property="og:locale" content="en_US">
 <meta property="og:image:alt" content="About — Md Sadekul Islam">
 <meta name="twitter:title" content="About — Md Sadekul Islam">
-<meta name="twitter:description" content="About Md Sadekul Islam, industrial engineer and researcher.">
+<meta name="twitter:description" content="About Md Sadekul Islam, mechanical and industrial engineer at Walton (2019–present) researching AI and optimization for engineering design, manufacturing and logistics.">
 <meta name="twitter:image" content="https://sadik120.github.io/img/profile.jpg">
 <meta property="profile:first_name" content="Sadekul">
 <meta property="profile:last_name" content="Islam">
@@ -282,12 +288,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
    "@id": "https://sadik120.github.io/about.html#webpage",
    "url": "https://sadik120.github.io/about.html",
    "name": "About — Md Sadekul Islam",
-   "description": "About Md Sadekul Islam, industrial engineer and researcher.",
+   "description": "About Md Sadekul Islam, mechanical and industrial engineer at Walton (2019–present) researching AI and optimization for engineering design, manufacturing and logistics.",
    "isPartOf": {
     "@id": "https://sadik120.github.io/#website"
    },
    "inLanguage": "en",
-   "dateModified": "2026-11-05",
+   "dateModified": "2026-11-06",
    "mainEntity": {
     "@id": "https://sadik120.github.io/#person"
    },
@@ -331,13 +337,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <div class="portrait"><img src="img/profile.jpg" alt="Portrait of Md Sadekul Islam"><span class="initials" aria-hidden="true" style="display:none;">SI</span></div>
     <div>
       <h1>About Me</h1>
-      <p>I am an industrial and production engineer. I studied Industrial and Production Engineering at KUET, where my thesis on line balancing and simulation became my first journal paper, and I then joined the refrigerator R&amp;D team at Walton Hi-Tech Industries in 2019.</p>
-      <p>At Walton I have worked on every stage of a product, from benchmarking and CAD through mold trials, prototypes and drawings to the pilot production line. Leading the design of the SBS-646L, a refrigerator with more than 250 parts, showed me how much depends on decisions made long before a product reaches the factory floor, including how the factory itself is laid out.</p>
-      <p>That question took me back to research. For my M.Engg. at BUET I built a pipeline that combines a genetic algorithm, deep reinforcement learning and a graph neural network to design facility layouts under strict space, safety and flow constraints. I now want to take this work further in doctoral research: making learning-based layout and production-system design reliable enough to use on real factories.</p>
+      <p>I am a mechanical and industrial engineer. I studied Industrial and Production Engineering at KUET, where my thesis on line balancing and simulation became my first journal paper, and I have been in the refrigerator R&amp;D team at Walton Hi-Tech Industries from 2019 to the present.</p>
+      <p>At Walton I have worked on every stage of a product, from benchmarking, CAD and finite element analysis through mold trials, prototypes and drawings to the pilot production line. Leading the design of the SBS-646L, a refrigerator with more than 250 parts, showed me how much depends on decisions made long before a product reaches the factory floor, including how the factory itself is laid out.</p>
+      <p>That question took me back to research. For my M.Engg. at BUET I built a pipeline that combines a genetic algorithm, deep reinforcement learning and a graph neural network to design facility layouts under strict space, safety and flow constraints. Alongside it, I have three journal manuscripts under submission, on line balancing, healthcare supply chain risk and healthcare digital transformation.</p>
+      <p>In doctoral research I want to use AI and optimization to design, make and move things better, with people at the center: learning-based methods for engineering design, smart manufacturing and resilient logistics, made reliable enough for real products and factories, and safe for the people who work alongside them.</p>
       <p>My toolkit spans both worlds: SolidWorks, ANSYS, Fusion 360, Moldflow and SketchUp on the design side, and Python, PyTorch, PyTorch Geometric, Tecnomatix, Arena and SimPy on the research side.</p>
     </div>
   </section>
-  <div class="gallery"><figure><img src="img/workspace.jpg" alt="" loading="lazy"></figure><figure><img src="img/print-in-hand.jpg" alt="" loading="lazy"></figure><figure><img src="img/prosthetic-ankle.jpg" alt="" loading="lazy"></figure><figure><img src="img/render-fan.jpg" alt="" loading="lazy"></figure><figure><img src="img/factory-interior.jpg" alt="" loading="lazy"></figure><figure><img src="img/render-vr.jpg" alt="" loading="lazy"></figure></div>
+  <div class="gallery"><figure><img src="img/workspace.jpg" alt="My design workspace" loading="lazy"></figure><figure><img src="img/print-in-hand.jpg" alt="A 3D-printed prototype part in hand" loading="lazy"></figure><figure><img src="img/prosthetic-ankle.jpg" alt="Spring-damped ankle module of the prosthetic leg design" loading="lazy"></figure><figure><img src="img/render-fan.jpg" alt="Concept render of a desk fan" loading="lazy"></figure><figure><img src="img/factory-interior.jpg" alt="Interior view of the virtual factory model" loading="lazy"></figure><figure><img src="img/render-vr.jpg" alt="Concept render of a VR headset" loading="lazy"></figure></div>
 </div>
 </main>
 <footer class="site-footer"><div class="wrap">

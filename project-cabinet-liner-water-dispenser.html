@@ -176,6 +176,12 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .foot-links a:hover{color:var(--accent)}
 .site-footer small{display:block;margin-top:1.1rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Justified body text (tablet and up); left-aligned on phones */
+@media (min-width:640px){
+  .about p,.article p,.article li,.post p,.feature p,.job li{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3}
+  .article .byline,.article .cite,.article .eyebrow,.article .meta,.post .meta{text-align:left;hyphens:manual}
+}
+
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://sadik120.github.io/project-cabinet-liner-water-dispenser.html">
@@ -248,9 +254,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   <p class="meta">Walton R&amp;D · SBS-646L</p>
   <h1>Cabinet Liner and Water Dispenser</h1>
   <p class="byline">Written by Md Sadekul Islam</p>
-  <p>The cabinet liner is the primary part of every refrigerator model. In a vertical split design it has to balance the compartments in a limited space, keep distinct temperature zones while managing airflow, organise shelves and other elements in large vertical doors, and mate precisely with the parts around it during assembly.</p><p>The water dispenser is one of the most critical and challenging systems in this refrigerator. It is sensitive to the pressure applied to its lever, it is a complicated assembly with tight tolerances, and it combines electrical parts, plastic parts, drinking water and a metal spring in one unit.</p><p>I designed the liner and the water-dispenser and ice-tray mechanisms in SolidWorks and verified their stability, reliability and performance through computer simulation and laboratory tests.</p>
+  <p>The cabinet liner is the primary part of every refrigerator model. In a vertical split design it has to balance the compartments in a limited space, keep distinct temperature zones while managing airflow, organise shelves and other elements in large vertical doors, and mate precisely with the parts around it during assembly.</p><p>The water dispenser is one of the most critical and challenging systems in this refrigerator. It is sensitive to the pressure applied to its lever, it is a complicated assembly with tight tolerances, and it combines electrical parts, plastic parts, drinking water and a metal spring in one unit.</p><p>I designed the liner and the water-dispenser and ice-tray mechanisms in SolidWorks and verified their stability, reliability and performance through computer simulation and laboratory tests. See the <a href="project-fea-validation.html">FEA of the dispenser lever and door hinge</a>.</p>
   <div class="figs"><figure><img src="img/liner-cad.jpg" alt="Cabinet liner model in SolidWorks." loading="lazy"><figcaption>Cabinet liner model in SolidWorks.</figcaption></figure><figure><img src="img/liner-line.jpg" alt="Formed liners on the production floor." loading="lazy"><figcaption>Formed liners on the production floor.</figcaption></figure><figure><img src="img/dispenser-cad.jpg" alt="Exploded view of the water dispenser assembly." loading="lazy"><figcaption>Exploded view of the water dispenser assembly.</figcaption></figure></div>
-  <nav class="pager" aria-label="More"><a href="project-sbs-646l-refrigerator.html"><span>Previous</span><strong>SBS-646L Side-by-Side Refrigerator</strong></a><a class="next" href="project-duct-cover-mold-trials.html"><span>Next</span><strong>Duct Cover Injection-Mold Trials</strong></a></nav>
+  <nav class="pager" aria-label="More"><a href="project-sbs-646l-refrigerator.html"><span>Previous</span><strong>SBS-646L Side-by-Side Refrigerator</strong></a><a class="next" href="project-fea-validation.html"><span>Next</span><strong>FEA Validation of SBS-646L Parts</strong></a></nav>
 </article></div>
 </main>
 <footer class="site-footer"><div class="wrap">

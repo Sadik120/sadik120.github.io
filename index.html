@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Md Sadekul Islam — Industrial Engineer &amp; AI-for-Manufacturing Researcher</title>
+<title>Md Sadekul Islam — Mechanical &amp; Industrial Engineer, AI Researcher</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Md Sadekul Islam: industrial and production engineer researching deep reinforcement learning and graph neural networks for facility layout, with five years of product R&amp;D at Walton.">
+<meta name="description" content="Md Sadekul Islam: mechanical and industrial engineer using AI and optimization for engineering design, manufacturing, logistics and human-centred systems. Five years of product R&amp;D at Walton; M.Engg., BUET.">
 <meta name="author" content="Md Sadekul Islam">
 <meta property="og:site_name" content="Md Sadekul Islam">
-<meta property="og:title" content="Md Sadekul Islam — Industrial Engineer &amp; AI-for-Manufacturing Researcher">
-<meta property="og:description" content="Md Sadekul Islam: industrial and production engineer researching deep reinforcement learning and graph neural networks for facility layout, with five years of product R&amp;D at Walton.">
+<meta property="og:title" content="Md Sadekul Islam — Mechanical &amp; Industrial Engineer, AI Researcher">
+<meta property="og:description" content="Md Sadekul Islam: mechanical and industrial engineer using AI and optimization for engineering design, manufacturing, logistics and human-centred systems. Five years of product R&amp;D at Walton; M.Engg., BUET.">
 <meta property="og:image" content="https://sadik120.github.io/img/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2306384b'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ESI%3C/text%3E%3C/svg%3E">
@@ -176,6 +176,29 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .foot-links a:hover{color:var(--accent)}
 .site-footer small{display:block;margin-top:1.1rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Home additions */
+.band h1.hero-h{max-width:20ch}
+.band p{max-width:52ch}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem}
+.band .btn.ghost{background:transparent;color:var(--on-ink);border-color:rgba(255,255,255,.75)}
+.band .btn.ghost:hover{background:var(--on-ink);color:#06384b}
+.stats{background:var(--ink);color:var(--on-ink)}
+.stats ul{list-style:none;margin:0;padding:1.6rem 0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1rem 1.5rem}
+.stats li{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.stats strong{font:700 clamp(1.5rem,3vw,2.1rem)/1.1 var(--display)}
+.stats span{font-size:.92rem;line-height:1.4;color:#cfe3e7}
+@media (max-width:860px){.stats ul{grid-template-columns:repeat(2,minmax(0,1fr))}.stats li:last-child{grid-column:1/-1}}
+.news{padding-top:2rem}
+.news p{margin:0;padding:1rem 1.25rem;background:var(--tint);border-left:4px solid var(--accent);color:var(--fg)}
+.news-tag{font:700 .72rem/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-right:.4rem}
+.links-line{font-size:1rem!important}
+.links-line a{color:#ffffff}
+/* Justified body text (tablet and up); left-aligned on phones */
+@media (min-width:640px){
+  .about p,.article p,.article li,.post p,.feature p,.job li{text-align:justify;text-justify:inter-word;-webkit-hyphens:auto;hyphens:auto;hyphenate-limit-chars:6 3 3}
+  .article .byline,.article .cite,.article .eyebrow,.article .meta,.post .meta{text-align:left;hyphens:manual}
+}
+
 </style>
 <!-- SEO:start -->
 <link rel="canonical" href="https://sadik120.github.io/">
@@ -183,9 +206,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <meta property="og:url" content="https://sadik120.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:locale" content="en_US">
-<meta property="og:image:alt" content="Md Sadekul Islam — Industrial Engineer &amp; AI-for-Manufacturing Researcher">
-<meta name="twitter:title" content="Md Sadekul Islam — Industrial Engineer &amp; AI-for-Manufacturing Researcher">
-<meta name="twitter:description" content="Md Sadekul Islam: industrial and production engineer researching deep reinforcement learning and graph neural networks for facility layout, with five years of product R&amp;D at Walton.">
+<meta property="og:image:alt" content="Md Sadekul Islam — Mechanical &amp; Industrial Engineer, AI Researcher">
+<meta name="twitter:title" content="Md Sadekul Islam — Mechanical &amp; Industrial Engineer, AI Researcher">
+<meta name="twitter:description" content="Md Sadekul Islam: mechanical and industrial engineer using AI and optimization for engineering design, manufacturing, logistics and human-centred systems. Five years of product R&amp;D at Walton; M.Engg., BUET.">
 <meta name="twitter:image" content="https://sadik120.github.io/img/hero.jpg">
 <meta property="profile:first_name" content="Sadekul">
 <meta property="profile:last_name" content="Islam">
@@ -256,15 +279,20 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     }
    ],
    "knowsAbout": [
+    "Engineering design",
+    "Design for manufacturing",
+    "Additive manufacturing",
+    "Finite element analysis",
     "Facility layout optimization",
+    "Supply chain resilience",
+    "Human-robot collaboration",
     "Deep reinforcement learning",
     "Graph neural networks",
     "Discrete-event simulation",
     "Assembly line balancing",
     "Supply chain risk management",
     "Product design",
-    "Injection molding",
-    "Design for manufacturing"
+    "Injection molding"
    ],
    "address": {
     "@type": "PostalAddress",
@@ -292,13 +320,13 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
    "@type": "ProfilePage",
    "@id": "https://sadik120.github.io/#webpage",
    "url": "https://sadik120.github.io/",
-   "name": "Md Sadekul Islam — Industrial Engineer & AI-for-Manufacturing Researcher",
-   "description": "Md Sadekul Islam: industrial and production engineer researching deep reinforcement learning and graph neural networks for facility layout, with five years of product R&D at Walton.",
+   "name": "Md Sadekul Islam — Mechanical & Industrial Engineer, AI Researcher",
+   "description": "Md Sadekul Islam: mechanical and industrial engineer using AI and optimization for engineering design, manufacturing, logistics and human-centred systems. Five years of product R&D at Walton; M.Engg., BUET.",
    "isPartOf": {
     "@id": "https://sadik120.github.io/#website"
    },
    "inLanguage": "en",
-   "dateModified": "2026-11-05",
+   "dateModified": "2026-11-06",
    "mainEntity": {
     "@id": "https://sadik120.github.io/#person"
    },
@@ -321,11 +349,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <main id="page">
 <section class="band" style="background-image:url('img/hero.jpg')" aria-labelledby="hero-h">
   <div class="wrap">
-    <p class="eyebrow">Industrial &amp; production engineer</p>
-    <h1 id="hero-h">Researching how learning-based optimization can design better factories</h1>
-    <p>Five years of refrigerator R&amp;D at Walton, and a thesis that uses deep reinforcement learning and graph neural networks to lay out production facilities.</p>
+    <p class="eyebrow">Md Sadekul Islam · Mechanical &amp; industrial engineer</p>
+    <h1 id="hero-h" class="hero-h">Using AI to design, make and move things better, with people at the center</h1>
+    <p>Five years of refrigerator R&amp;D at Walton, and a BUET thesis that combines deep reinforcement learning and graph neural networks to optimize factory layouts. I am now working toward intelligent, human-centred design, manufacturing and supply chain systems.</p>
+    <div class="cta"><a class="btn" href="research.html">View research</a><a class="btn ghost" href="Md_Sadekul_Islam_CV.pdf" target="_blank" rel="noopener">Download CV</a></div>
   </div>
 </section>
+<section class="stats" aria-label="At a glance"><div class="wrap">
+  <ul>
+    <li><strong>646&nbsp;L</strong><span>Walton&rsquo;s largest refrigerator, launched 2023</span></li>
+    <li><strong>250+</strong><span>parts in the SBS-646L design</span></li>
+    <li><strong>26</strong><span>machines in the thesis layout case</span></li>
+    <li><strong>3</strong><span>manuscripts submitted: IJPR, ESWA, TFSC</span></li>
+    <li><strong>M.Engg.</strong><span>BUET, 2026</span></li>
+  </ul>
+</div></section>
+<div class="wrap news"><p><span class="news-tag">News</span> <strong>Nov 2026:</strong> three manuscripts submitted, to the <a href="research-sewing-line-optimisation.html">International Journal of Production Research</a>, <a href="research-healthcare-supply-chain-risk.html">Expert Systems with Applications</a> and <a href="research-healthcare-digital-transformation.html">Technological Forecasting and Social Change</a>. <strong>Sept 2026:</strong> M.Engg. completed at BUET.</p></div>
 <div class="wrap features">
   <section class="feature">
     <div class="feature-media contain"><img src="img/fridge-646l-open.jpg" alt="The SBS-646L side-by-side refrigerator with its doors open"></div>
@@ -339,15 +378,16 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <div class="feature-media contain"><img src="img/layout-pipeline.svg" alt="Diagram of the two-stage facility layout pipeline"></div>
     <div>
       <h2>Research</h2>
-      <p>My research applies simulation and machine learning to production systems. My M.Engg. thesis at BUET combines a genetic algorithm, a Rainbow DQN agent and a graph neural network to generate facility layouts under strict spatial and flow constraints.</p>
+      <p>My research applies AI, optimization and simulation to how products are designed, made and delivered. My M.Engg. thesis at BUET combines a genetic algorithm, a Rainbow DQN agent and a graph neural network to generate facility layouts under strict spatial and flow constraints.</p>
       <a class="btn" href="research.html">Publications</a>
     </div>
   </section>
 </div>
 <section class="band" style="background-image:url('img/banner.jpg')" aria-labelledby="banner-h">
   <div class="wrap">
-    <h2 id="banner-h">Smarter Layouts for the Factories That Build Our Products</h2>
+    <h2 id="banner-h">Smarter Products, Smarter Production, Safer Work</h2>
     <p class="eyebrow" style="margin-top:1.4rem">Md Sadekul Islam</p>
+    <p class="links-line"><a href="mailto:sadekul.ipe.kuet@gmail.com">sadekul.ipe.kuet@gmail.com</a> · <a href="https://scholar.google.com/citations?user=fwAI9YIAAAAJ" rel="me noopener" target="_blank">Google Scholar</a> · <a href="https://orcid.org/0000-0003-4205-4544" rel="me noopener" target="_blank">ORCID</a> · <a href="https://www.linkedin.com/in/md-sadekul" rel="me noopener" target="_blank">LinkedIn</a> · <a href="https://github.com/sadik120" rel="me noopener" target="_blank">GitHub</a></p>
   </div>
 </section>
 </main>
@@ -361,9 +401,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   var b=document.querySelector('.burger'), m=document.getElementById('menu');
   if(b&&m){b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});}
   var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
-})();
-</script>
-    var y=document.getElementById('yr'); if(y) y.textContent=new Date().getFullYear();
 })();
 </script>
 
